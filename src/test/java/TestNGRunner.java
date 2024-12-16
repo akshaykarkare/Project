@@ -1,0 +1,2 @@
+public class TestNGRunner {
+}
