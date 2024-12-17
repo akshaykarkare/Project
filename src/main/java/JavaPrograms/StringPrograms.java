@@ -13,9 +13,25 @@ public class StringPrograms {
         //String concatenation
         //strConcat("aaabbbacfwww");
 
-        strReverser("I am a boy");
+        //reverse string with preserving blank spaces
+        //strReverser("I am a boy");
+
+        //retrieve int from string
+        extractIntFrmStr("India won by 123 runs");
     }
 
+    public static void extractIntFrmStr(String in){
+        String[] a1 = in.split(" ");
+        int a=0;
+        for (String x : a1){
+            char c = x.charAt(0);
+
+            if (Character.isDigit(c)){
+                a = Integer.parseInt(x);
+            }
+        }
+        System.out.println("extracted int is : " + a);
+    }
     public static void strReverser(String input){
         char[] ic = input.toCharArray();
         char[] oc = new char[input.length()];
