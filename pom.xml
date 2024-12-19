@@ -97,6 +97,20 @@
             <artifactId>monte-screen-recorder</artifactId>
             <version>0.7.7.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.15.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+            <scope>test</scope>
+        </dependency>
+
 
 
     </dependencies>
@@ -110,6 +124,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                     <!--<parallel>methods</parallel>-->
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <testFailureIgnore>true</testFailureIgnore>
@@ -172,6 +189,15 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
             </plugin>
 
 

@@ -1,6 +1,9 @@
-context\WebDriverManager.class
 context\Util.class
 org\example\Main.class
+JavaPrograms\IntegersPrograms.class
+context\WebDriverManager.class
+JavaPrograms\StringPrograms.class
 context\TestContext.class
+JavaPrograms\PatternPrograms.class
 stepdefinitions\hooks.class
 stepdefinitions\SDCommon.class
